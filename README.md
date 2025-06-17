@@ -32,7 +32,7 @@ Fragmentation does not happen during GRO (Generic Receive Offload) based on the 
 
 **Summary:**
 
-stack ==> GSO ===> NIC ==> GRO ==> stack
+GRO ===> stack ==> GSO 
 
 
 client1 <========= brlan(eth4) <====== eth5(WAN) <====client2
