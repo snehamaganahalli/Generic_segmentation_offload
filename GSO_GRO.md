@@ -6,11 +6,11 @@ Improve performace. How performance improved n GSO?
 
 Without GSO:
 
-Application===========> TCP/IP stack ===================> segmentation =================> Driver===================> NIC
+Application=====> TCP/IP stack =======> segmentation ======> Driver=====> NIC
 
 With GSO (up to down in stack):
 
-Application===========> TCP/IP stack ===================> super packet =================> Driver (GSO)============> NIC
+Application===> TCP/IP stack =======> super packet ===> Driver (GSO)===> NIC
 
 GSO improves performance by delaying segmentation until the driver layer. This allows the networking stack to process fewer larger (super) packet.\
 This reduces the CPU overhead and improves the performance.
